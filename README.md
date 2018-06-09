@@ -28,3 +28,18 @@ Chapter 2: Model 2 and the MVC Pattern
 
 		url:http://localhost:8080/appdesign4/form
 
+
+Chapter 3: Introduction to Spring MVC
+
+	3.1 - 3.3 introduce
+
+	3.4 demo
+
+		url:http://localhost:8080/springmvc-intro1/input-product
+
+	3.5  view resolver
+
+		url:http://localhost:8080/springmvc-intro2/input-product
+
+		InternalResourceViewResolver prefix suffix
+
