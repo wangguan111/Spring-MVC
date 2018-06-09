@@ -37,9 +37,37 @@ Chapter 3: Introduction to Spring MVC
 
 		url:http://localhost:8080/springmvc-intro1/input-product
 
+		1.web.xml
+		2.springmvc-servlet.xml
+
 	3.5  view resolver
 
 		url:http://localhost:8080/springmvc-intro2/input-product
+	
+		1.viewResolver InternalResourceViewResolver prefix suffix
+		2.contextConfigLocation
 
-		InternalResourceViewResolver prefix suffix
+
+Chapter 4: Annotation-Based Controllers
+
+	4.1 Controller and RequestMapping Annotation
+
+	4.2 deal with request
+
+	4.3 demo
+
+		url:http://localhost:8080/annotated1/input-product
+
+		1.component-scan
+		2.Controller
+		3.RequestMapping
+		4.Model addAttribute
+
+	4.4 @Autowired and @Service
+
+		url:http://localhost:8080/annotated1/input-product
+
+		1.@Autowired
+		2.RedirectAttributes addFlashAttribute
+		3.@PathVariable
 
