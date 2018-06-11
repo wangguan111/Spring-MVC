@@ -127,4 +127,25 @@ Chapter 7: Validators
 		1.ConstraintHelper
 		2.PastValidatorForTemporal
 		3. @Size  @Past @Valid
+
+
+Chapter 8: The Expression Language
+
+
+Chapter 9: JSTL
+
+
+Chapter 10: Internationalization
+
+	10.1 - 10.2 ResourceBundle
+
+		1.ResourceBundle
+
+	10.3 -10.6 AcceptHeaderLocaleResolver demo
+
+		url:http://localhost:8080/il8n/add-product
+
+		1.org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver
+		2.accept-language
+
 	
