@@ -87,3 +87,21 @@ Chapter 5: Data Binding and the Form Tag Library
 	5.3 demo
 
 		url:http://localhost:8080/tags-demo/list-books
+
+
+Chapter 6: Converters and Formatters
+
+	6.1 Converters demo
+
+		url:http://localhost:8080/converter-demo/add-employee
+
+		1.org.springframework.context.support.ConversionServiceFactoryBean
+
+	6.2 Formatters demo
+
+		url:http://localhost:8080/formatter-demo/add-employee
+
+		1.org.springframework.format.support.FormattingConversionServiceFactoryBean
+
+	6.3 Registrar
+	
