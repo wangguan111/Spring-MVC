@@ -104,4 +104,27 @@ Chapter 6: Converters and Formatters
 		1.org.springframework.format.support.FormattingConversionServiceFactoryBean
 
 	6.3 Registrar
+
+
+Chapter 7: Validators
+
+	7.1 order: formatter->validator
+
+	7.2 -7.7 spring-validator demo
+
+		url:http://localhost:8080/spring-validator/add-product
+
+		1.org.springframework.validation.Validator
+		2.org.springframework.context.support.ReloadableResourceBundleMessageSource
+		3.org.springframework.validation.ValidationUtils
+		4.org.springframework.validation.Errors
+		5.message.properties
+
+	7.8 - 7.9 JSR303-validator demo
+
+		url:http://localhost:8080/jsr303-validator/add-product
+
+		1.ConstraintHelper
+		2.PastValidatorForTemporal
+		3. @Size  @Past @Valid
 	
