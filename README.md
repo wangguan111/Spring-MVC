@@ -148,4 +148,24 @@ Chapter 10: Internationalization
 		1.org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver
 		2.accept-language
 
-	
+
+Chapter 11: File Upload
+
+	10.1 - 11.2 introduce
+
+	10.3 - 10.8 commons fileupload demo
+
+		url:http://localhost:8080/upload1/input-product
+
+		1.MultipartFile
+		2.commons-fileupload-1.3.1
+		3.org.springframework.web.multipart.commons.CommonsMultipartResolver
+
+	10.9 - 11.10 servlet3 demo
+
+		url:http://localhost:8080/upload2/input-product
+
+		1.multipart-config
+		2.org.springframework.web.multipart.support.StandardServletMultipartResolver
+		3.@NotNull
+		4.Html5FileUploadController
