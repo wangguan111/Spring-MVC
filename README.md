@@ -169,3 +169,12 @@ Chapter 11: File Upload
 		2.org.springframework.web.multipart.support.StandardServletMultipartResolver
 		3.@NotNull
 		4.Html5FileUploadController
+
+
+Chapter 12: File Download
+
+	12.1 - 12.3 download demo
+
+		url:http://localhost:8080/download/image.html
+
+		1.@RequestHeader
