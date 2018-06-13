@@ -178,3 +178,23 @@ Chapter 12: File Download
 		url:http://localhost:8080/download/image.html
 
 		1.@RequestHeader
+
+
+Chapter 13: Testing Your Application
+
+	13.1 - 13.3 Unit-test demo
+
+		1.junit
+		2.@Before  @After @Test
+		3.@RunWith @SuiteClasses
+
+	13.4 test doubles
+
+		1.mockito
+		2.dummy stub spy fake mock
+
+	13.5 spring mvc controller unit-test 
+
+	13.6 spring mvc integration-test
+
+	13.7 web-root integration-test
