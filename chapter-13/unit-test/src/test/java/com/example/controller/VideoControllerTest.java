@@ -5,9 +5,11 @@ import static org.junit.Assert.*;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 
-public class VideoControllerTest {
+public class VideoControllerTest 
+{
     @Test
-    public void testGetMostViewed() {
+    public void testGetMostViewed() 
+    {
         VideoController videoController = new VideoController();
         MockHttpServletRequest request = new MockHttpServletRequest();
         request.setRequestURI("/mostViewed");
@@ -23,7 +25,8 @@ public class VideoControllerTest {
     }
     
     @Test
-    public void testGetMostViewedWithNoId() {
+    public void testGetMostViewedWithNoId() 
+    {
         VideoController videoController = new VideoController();
         MockHttpServletRequest request = new MockHttpServletRequest();
         request.setRequestURI("/mostViewed");

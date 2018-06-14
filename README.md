@@ -191,10 +191,21 @@ Chapter 13: Testing Your Application
 	13.4 test doubles
 
 		1.mockito
-		2.dummy stub spy fake mock
+		2.dummy stub spy fake mock	
 
 	13.5 spring mvc controller unit-test 
 
+		1.MockHttpServletRequest
+		2.MockHttpServletResponse
+		3.ModelAndViewAssert assertModelAttributeAvailable assertAndReturnModelAttributeOfType assertSortAndCompareListModelAttribute
+		4.(a,b)->{}
+
 	13.6 spring mvc integration-test
+
+		1.MockMVC
+		2.perform
+		3.@RunWith
+		4.@WebAppConfiguration
+		5.@ContextConfiguration
 
 	13.7 web-root integration-test

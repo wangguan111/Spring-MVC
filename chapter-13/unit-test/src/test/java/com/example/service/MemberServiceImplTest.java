@@ -7,10 +7,12 @@ import com.example.dao.MemberDAO;
 import com.example.fake.MemberDAOFake;
 import com.example.model.Member;
 
-public class MemberServiceImplTest {
+public class MemberServiceImplTest 
+{
 
     @Test
-    public void testAddMember() {
+    public void testAddMember() 
+    {
         MemberDAO memberDAO = new MemberDAOFake();
         memberDAO.add(new Member(1, "John Diet"));
         memberDAO.add(new Member(2, "Jane Biteman"));
