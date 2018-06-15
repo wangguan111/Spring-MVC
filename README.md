@@ -209,3 +209,23 @@ Chapter 13: Testing Your Application
 		5.@ContextConfiguration
 
 	13.7 web-root integration-test
+
+
+Appendix A: Tomcat
+
+	1.context
+	2.resource
+	3.TLS
+
+
+Appendix B: Using Spring Tool Suite with Maven
+	1.failOnMissingWebXml
+
+
+Appendix C: The Servlet API
+
+
+Appendix D: JavaServer Pages
+
+
+Appendix E: Deployment	

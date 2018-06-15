@@ -25,6 +25,7 @@ public class BookControllerTest
                 new Book("0001", LocalDate.of(2016, 6, 1)),
                 new Book("0003", LocalDate.of(2016, 12, 12)));
         assertAndReturnModelAttributeOfType(mav, "latest", expectedList.getClass());
+        
         Comparator<Book> pubDateComparator = (a, b) -> a.getPubDate().compareTo(b.getPubDate());
         assertSortAndCompareListModelAttribute(mav, "latest", expectedList, pubDateComparator);
     }
