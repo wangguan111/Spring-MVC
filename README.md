@@ -5,7 +5,7 @@ Chapter 1: The Spring Framework
 
 	1.1 xml
 	
-	1.2 getBean
+	1.2 getBean by conctuctor or property
 
 
 Chapter 2: Model 2 and the MVC Pattern

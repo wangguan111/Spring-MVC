@@ -19,21 +19,23 @@ import java.math.BigDecimal;
 
 @WebFilter(filterName = "DispatcherFilter",
         urlPatterns = { "/*" })
-public class DispatcherFilter implements Filter {
-
+public class DispatcherFilter implements Filter 
+{
     @Override
-    public void init(FilterConfig filterConfig)
-            throws ServletException {
+    public void init(FilterConfig filterConfig)throws ServletException 
+    {
+    	
     }
 
     @Override
-    public void destroy() {
+    public void destroy() 
+    {
+    	
     }
 
     @Override
-    public void doFilter(ServletRequest request,
-            ServletResponse response, FilterChain filterChain)
-            throws IOException, ServletException {
+    public void doFilter(ServletRequest request,ServletResponse response, FilterChain filterChain)throws IOException, ServletException 
+    {
         HttpServletRequest req = (HttpServletRequest) request;
         String uri = req.getRequestURI();
         /*
@@ -47,29 +49,33 @@ public class DispatcherFilter implements Filter {
         int lastIndex = uri.lastIndexOf("/");
         String action = uri.substring(lastIndex + 1);
         String dispatchUrl = null;
-        if ("input-product".equals(action)) {
+        if ("input-product".equals(action)) 
+        {
             // do nothing
             dispatchUrl = "/jsp/ProductForm.jsp";
-        } else if ("save-product".equals(action)) {
+        } 
+        else if ("save-product".equals(action)) 
+        {
             // create form
             ProductForm productForm = new ProductForm();
             // populate action properties
             productForm.setName(request.getParameter("name"));
-            productForm.setDescription(
-                    request.getParameter("description"));
+            productForm.setDescription(request.getParameter("description"));
             productForm.setPrice(request.getParameter("price"));
             
             // create model
             Product product = new Product();
             product.setName(productForm.getName());
             product.setDescription(product.getDescription());
-            try {
+            try 
+            {
                 product.setPrice(new BigDecimal(productForm.getPrice()));
-            } catch (NumberFormatException e) {
+            } catch (NumberFormatException e) 
+            {
+            	
             }
             // execute action method
-            SaveProductAction saveProductAction = 
-                    new SaveProductAction();
+            SaveProductAction saveProductAction =  new SaveProductAction();
             saveProductAction.save(product);
             
             // store model in a scope variable for the view
@@ -77,11 +83,13 @@ public class DispatcherFilter implements Filter {
             dispatchUrl = "/jsp/ProductDetails.jsp";
         }
         // forward to a view
-        if (dispatchUrl != null) {
-            RequestDispatcher rd = request
-                    .getRequestDispatcher(dispatchUrl);
+        if (dispatchUrl != null)
+        {
+            RequestDispatcher rd = request.getRequestDispatcher(dispatchUrl);
             rd.forward(request, response);
-        } else {
+        } 
+        else 
+        {
             // let static contents pass
             filterChain.doFilter(request, response);
         }
