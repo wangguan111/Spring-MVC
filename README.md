@@ -65,7 +65,7 @@ Chapter 4: Annotation-Based Controllers
 
 	4.4 @Autowired and @Service
 
-		url:http://localhost:8080/annotated1/input-product
+		url:http://localhost:8080/annotated2/input-product
 
 		1.@Autowired
 		2.RedirectAttributes addFlashAttribute
@@ -73,7 +73,7 @@ Chapter 4: Annotation-Based Controllers
 
 	4.5 RedirectAttributes
 
-	4.6 @PathVariable
+	4.6 @PathVariable @RequestParam
 
 	4.7 @ModeAttribute
 

@@ -13,45 +13,43 @@ import domain.Product;
 
 @org.springframework.stereotype.Controller
 
-public class EmployeeController {
-	
+public class EmployeeController 
+{	
 	private static final Log logger = LogFactory.getLog(ProductController.class);
 	
 	@RequestMapping(value="/input-employee")
-	public String inputEmployee() {
+	public String inputEmployee() 
+	{
 		logger.info("inputEmployee called");
 		return "ProductForm";
 	}
 
 	@RequestMapping(value="/save-employee")
-	public String saveEmployee(Product product, BindingResult bindingResult,
-			Model model) {
+	public String saveEmployee(Product product, BindingResult bindingResult,Model model) 
+	{
 		logger.info("saveEmployee called 2");
 		
 		logger.info("as map:" + model.asMap());
 		// we don't need ProductForm anymore,l
 		// Spring MVC can bind HTML forms to Java objects
 		
-		if (bindingResult.hasErrors()) {
+		if (bindingResult.hasErrors()) 
+		{
 			logger.info("has errors");
 			FieldError fieldError = bindingResult.getFieldError();
-			logger.info("Code:" + fieldError.getCode() 
-					+ ", field:" + fieldError.getField());
-			
+			logger.info("Code:" + fieldError.getCode() + ", field:" + fieldError.getField());			
 			return "ProductForm";
 		}
 		
-		// save product here
-		
-	    model.addAttribute("product", product);
-	    
-	   
+		// save product here	
+	    model.addAttribute("product", product);	   
 		return "ProductDetails";
 	}
 	
 	
 	@ModelAttribute
-	public Product addAccount(@RequestParam String number) {
+	public Product addAccount(@RequestParam String number) 
+	{
 		logger.info("addAccount called. number is " + number);
 	    return new Product();
 	}
@@ -59,7 +57,8 @@ public class EmployeeController {
 	// Add multiple attributes
 
 	@ModelAttribute
-	public void populateModel(@RequestParam String number, Model model) {
+	public void populateModel(@RequestParam String number, Model model) 
+	{
 	    logger.info("populateModel called. number is " + number);
 	    model.addAttribute("blah");
 	}
