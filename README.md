@@ -139,6 +139,11 @@ Chapter 5: Data Binding and the Form Tag Library
 
 		url:http://localhost:8080/tags-demo/list-books
 
+			Controller-BookController 
+			Model(javabean)-Category
+							-Book	
+			service-BookServiceImpl
+
 
 Chapter 6: Converters and Formatters
 
