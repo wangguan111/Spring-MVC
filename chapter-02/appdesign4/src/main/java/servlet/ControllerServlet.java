@@ -29,9 +29,8 @@ private static final long serialVersionUID = 6679L;
     public void destroy() {
         dependencyInjector.shutDown();
     }
-    protected void process(HttpServletRequest request,
-            HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void process(HttpServletRequest request,HttpServletResponse response)throws ServletException, IOException 
+    {
 //        ReadListener r = null;
         String uri = request.getRequestURI();
         /*
@@ -43,19 +42,20 @@ private static final long serialVersionUID = 6679L;
          */
         int lastIndex = uri.lastIndexOf("/");
         String action = uri.substring(lastIndex + 1);
-        if ("form".equals(action)) {
+        if ("form".equals(action)) 
+        {
             String dispatchUrl = "/jsp/Form.jsp";
-            RequestDispatcher rd = 
-                    request.getRequestDispatcher(dispatchUrl);
+            RequestDispatcher rd = request.getRequestDispatcher(dispatchUrl);
             rd.forward(request, response);
-        } else if ("pdf".equals(action)) {
+        } 
+        else if ("pdf".equals(action)) 
+        {
             HttpSession session = request.getSession(true);
             String sessionId = session.getId();
-            PDFAction pdfAction = (PDFAction) dependencyInjector
-                    .getObject(PDFAction.class);
             String text = request.getParameter("text");
-            String path = request.getServletContext()
-                    .getRealPath("/result") + sessionId + ".pdf";
+            String path = request.getServletContext().getRealPath("/result") + sessionId + ".pdf";
+            
+            PDFAction pdfAction = (PDFAction) dependencyInjector.getObject(PDFAction.class);
             pdfAction.createPDF(path, text);
             
             // redirect to the new pdf
@@ -63,11 +63,13 @@ private static final long serialVersionUID = 6679L;
             redirect.append(request.getScheme() + "://");
             redirect.append(request.getLocalName());
             int port = request.getLocalPort();
-            if (port != 80) {
+            if (port != 80)
+            {
                 redirect.append(":" + port);
             }
             String contextPath = request.getContextPath();
-            if (!"/".equals(contextPath)) {
+            if (!"/".equals(contextPath))
+            {
                 redirect.append(contextPath);
             }
             redirect.append("/result/" + sessionId + ".pdf");
@@ -76,16 +78,12 @@ private static final long serialVersionUID = 6679L;
     }
 
     @Override
-    protected void doGet(HttpServletRequest request,
-            HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
         process(request, response);
     }
     
     @Override
-    protected void doPost(HttpServletRequest request,
-            HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request,HttpServletResponse response)throws ServletException, IOException {
         process(request, response);
     }
 

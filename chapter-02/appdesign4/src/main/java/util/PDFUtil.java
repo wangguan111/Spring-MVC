@@ -18,8 +18,7 @@ public class PDFUtil {
             float fontSize = 12.0f;
 
             PDRectangle pageSize = page.getMediaBox();
-            float centeredXPosition = (pageSize.getWidth() - fontSize
-                    / 1000f) / 2f;
+            float centeredXPosition = (pageSize.getWidth() - fontSize / 1000f) / 2f;
 //            float stringWidth = font.getStringWidth(input);
  
             PDPageContentStream contentStream = new PDPageContentStream(doc, page);

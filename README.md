@@ -16,17 +16,38 @@ Chapter 2: Model 2 and the MVC Pattern
 
 		url:http://localhost:8080/appdesign1/input-product
 
+			Action-SaveProductAction
+			Controler(Servlet)-ControllerServlet
+			View(Form)-ProductForm
+			Model(javabean)-Product
+
 	2.4 filter mvc
 
 		url:http://localhost:8080/appdesign2/input-product
 
+			Action-***
+			Controler(Filter)-DispatcherFilter
+			View(Form)-***
+			Model(javabean)-***
+
 	2.5 servlet + validate mvc
 
-		url:http://localhost:8080/appdesign4/input-product
+		url:http://localhost:8080/appdesign3/input-product
+
+			Action-***
+			Controler(Servlet)-ControllerServlet
+			View(Form)-***
+			Model(javabean)-***
+			Validator-ProductValidator
 
 	2.6 inject
 
 		url:http://localhost:8080/appdesign4/form
+
+			Action-PDFAction
+			Service-PDFService
+			Control(Servlet)-ControllerServlet
+			util-PDFUtil
 
 
 Chapter 3: Introduction to Spring MVC
