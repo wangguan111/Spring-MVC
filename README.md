@@ -46,7 +46,7 @@ Chapter 2: Model 2 and the MVC Pattern
 
 			Action-PDFAction
 			Service-PDFService
-			Control(Servlet)-ControllerServlet
+			Control(Servlet)-ControllerServlet   inject
 			util-PDFUtil
 
 
@@ -86,30 +86,47 @@ Chapter 4: Annotation-Based Controllers
 
 	4.1 Controller and RequestMapping Annotation
 
-	4.2 deal with request
+	4.2 request parameter and return value
 
 	4.3 demo
 
 		url:http://localhost:8080/annotated1/input-product
 
-		1.component-scan
-		2.Controller
-		3.RequestMapping value method
+		1.springmvc-config.xml  <context:component-scan base-package="controller"/>
+								<mvc:resources mapping="/css/**" location="/css/"/>
+								<mvc:annotation-driven/>
+		2.@Controller
+		3.@RequestMapping(value="/input-product")  method
 		4.Model addAttribute
+
+			Controller-ProductController 
+			View(Form)-ProductForm
+			Model(javabean)-Product	
 
 	4.4 @Autowired and @Service
 
 		url:http://localhost:8080/annotated2/input-product
 
 		1.@Autowired
-		2.RedirectAttributes addFlashAttribute
-		3.@PathVariable
+		2.@Service
+		3.RedirectAttributes addFlashAttribute
+		4.@PathVariable
+		5.BindingResult
+		6.@RequestParam
+
+			Controller-ProductController 
+					  -EmployeeController
+			View(Form)-***
+			Model(javabean)-***	
+			service-ProductServiceImpl
 
 	4.5 RedirectAttributes
 
 	4.6 @PathVariable @RequestParam
 
 	4.7 @ModeAttribute
+
+		1.create mode
 
 
 Chapter 5: Data Binding and the Form Tag Library
