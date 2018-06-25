@@ -13,12 +13,11 @@ import form.ProductForm;
 
 public class SaveProductController implements Controller {
 
-    private static final Log logger = LogFactory
-            .getLog(SaveProductController.class);
+    private static final Log logger = LogFactory.getLog(SaveProductController.class);
 
     @Override
-    public ModelAndView handleRequest(HttpServletRequest request,
-            HttpServletResponse response) throws Exception {
+    public ModelAndView handleRequest(HttpServletRequest request,HttpServletResponse response) throws Exception 
+    {
         logger.info("SaveProductController called");
         ProductForm productForm = new ProductForm();
         // populate action properties

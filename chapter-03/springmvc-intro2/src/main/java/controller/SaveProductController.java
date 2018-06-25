@@ -16,15 +16,13 @@ public class SaveProductController implements Controller {
 	private static final Log logger = LogFactory.getLog(SaveProductController.class);
 	
 	@Override
-	public ModelAndView handleRequest(HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
+	public ModelAndView handleRequest(HttpServletRequest request,HttpServletResponse response) throws Exception
+	{
 		logger.info("SaveProductController called");
         ProductForm productForm = new ProductForm();
         // populate action properties
-        productForm.setName(
-                request.getParameter("name"));
-        productForm.setDescription(
-                request.getParameter("description"));
+        productForm.setName( request.getParameter("name"));
+        productForm.setDescription(request.getParameter("description"));
         productForm.setPrice(request.getParameter("price"));
 
         // create model
@@ -32,8 +30,7 @@ public class SaveProductController implements Controller {
         product.setName(productForm.getName());
         product.setDescription(productForm.getDescription());
         try {
-        	product.setPrice(Float.parseFloat(
-        			productForm.getPrice()));
+        	product.setPrice(Float.parseFloat(productForm.getPrice()));
         } catch (NumberFormatException e) {
         }
 

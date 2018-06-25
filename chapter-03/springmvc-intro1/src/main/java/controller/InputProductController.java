@@ -10,12 +10,11 @@ import org.springframework.web.servlet.mvc.Controller;
 
 public class InputProductController implements Controller {
 
-    private static final Log logger = LogFactory
-            .getLog(InputProductController.class);
+    private static final Log logger = LogFactory.getLog(InputProductController.class);
 
     @Override
-    public ModelAndView handleRequest(HttpServletRequest request,
-            HttpServletResponse response) throws Exception {
+    public ModelAndView handleRequest(HttpServletRequest request,HttpServletResponse response) throws Exception 
+    {
         logger.info("InputProductController called");
         return new ModelAndView("/WEB-INF/jsp/ProductForm.jsp");
     }

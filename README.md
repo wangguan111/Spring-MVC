@@ -58,15 +58,28 @@ Chapter 3: Introduction to Spring MVC
 
 		url:http://localhost:8080/springmvc-intro1/input-product
 
-		1.web.xml
-		2.springmvc-servlet.xml
+		1.web.xml                      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		2.springmvc-servlet.xml         <bean name="/input-product" class="controller.InputProductController"/>
+		3.handleRequest
+		4.ModelAndView
+
+			Controller-InputProductController 
+					  -SaveProductController
+			View(Form)-ProductForm
+			Model(javabean)-Product		  
 
 	3.5  view resolver
 
 		url:http://localhost:8080/springmvc-intro2/input-product
 	
-		1.viewResolver InternalResourceViewResolver prefix suffix
-		2.contextConfigLocation
+		1.springmvc-config.xml
+		<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"> prefix suffix   
+		2.web.xml   <param-name>contextConfigLocation</param-name>
+
+			Controller-*** 
+					  -***
+			View(Form)-***
+			Model(javabean)-***	
 
 
 Chapter 4: Annotation-Based Controllers
