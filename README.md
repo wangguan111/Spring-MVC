@@ -152,6 +152,7 @@ Chapter 6: Converters and Formatters
 		url:http://localhost:8080/converter-demo/add-employee
 
 		1.org.springframework.context.support.ConversionServiceFactoryBean
+		2.	<mvc:annotation-driven conversion-service="conversionService" />
 
 			Controller-EmployeeController 
 			Model(javabean)-Employee
@@ -184,6 +185,11 @@ Chapter 7: Validators
 		4.org.springframework.validation.Errors
 		5.message.properties
 
+			Controller-ProductController 
+			Model(javabean)-Product
+			service-LocalDateFormatter
+			Validator-ProductValidator
+
 	7.8 - 7.9 JSR303-validator demo
 
 		url:http://localhost:8080/jsr303-validator/add-product
@@ -191,6 +197,11 @@ Chapter 7: Validators
 		1.ConstraintHelper
 		2.PastValidatorForTemporal
 		3. @Size  @Past @Valid
+
+			Controller-*** 
+			Model(javabean)-***
+			service-***
+			Validator-PastValidatorForTemporal
 
 
 Chapter 8: The Expression Language
