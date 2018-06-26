@@ -222,6 +222,11 @@ Chapter 10: Internationalization
 
 		1.org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver
 		2.accept-language
+		3.message lable
+
+			Controller-*** 
+			Model(javabean)-***	
+			Validator-ProductValidator
 
 
 Chapter 11: File Upload
