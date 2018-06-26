@@ -153,11 +153,19 @@ Chapter 6: Converters and Formatters
 
 		1.org.springframework.context.support.ConversionServiceFactoryBean
 
+			Controller-EmployeeController 
+			Model(javabean)-Employee
+			service-StringToLocalDateConverter
+
 	6.2 Formatters demo
 
 		url:http://localhost:8080/formatter-demo/add-employee
 
 		1.org.springframework.format.support.FormattingConversionServiceFactoryBean
+
+			Controller-*** 
+			Model(javabean)-***
+			service-LocalDateFormatter
 
 	6.3 Registrar
 

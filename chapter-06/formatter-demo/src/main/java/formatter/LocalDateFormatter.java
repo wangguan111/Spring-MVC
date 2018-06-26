@@ -31,9 +31,7 @@ public class LocalDateFormatter implements Formatter<LocalDate> {
             return LocalDate.parse(s, DateTimeFormatter.ofPattern(datePattern));
         } catch (DateTimeParseException e) {
             // the error message will be displayed in <form:errors>
-            throw new IllegalArgumentException(
-                    "invalid date format. Please use this pattern\""
-                            + datePattern + "\"");
+            throw new IllegalArgumentException("invalid date format. Please use this pattern\""+ datePattern + "\"");
         }
     }
 }

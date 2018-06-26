@@ -25,7 +25,8 @@ public class EmployeeController
     {
         if (bindingResult.hasErrors()) 
         {
-            FieldError fieldError = bindingResult.getFieldError();
+            @SuppressWarnings("unused")
+			FieldError fieldError = bindingResult.getFieldError();
             
             return "EmployeeForm";
         }
