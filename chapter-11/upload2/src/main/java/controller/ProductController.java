@@ -26,28 +26,26 @@ public class ProductController {
 	private static final Log logger = LogFactory.getLog(ProductController.class);
 	
 	@RequestMapping(value="/input-product")
-	public String inputProduct(Model model) {
+	public String inputProduct(Model model) 
+	{
 		model.addAttribute("product", new Product());
 		return "ProductForm";
 	}
 
     @RequestMapping(value = "/save-product")
-    public String saveProduct(HttpServletRequest servletRequest,
-            @ModelAttribute Product product, BindingResult bindingResult,
-            Model model) {
-
+    public String saveProduct(HttpServletRequest servletRequest,@ModelAttribute Product product, BindingResult bindingResult,  Model model) 
+    {
         List<MultipartFile> files = product.getImages();
-
         List<String> fileNames = new ArrayList<String>();
 
-        if (null != files && files.size() > 0) {
-            for (MultipartFile multipartFile : files) {
-
+        if (null != files && files.size() > 0)
+        {
+            for (MultipartFile multipartFile : files) 
+            {
                 String fileName = multipartFile.getOriginalFilename();
                 fileNames.add(fileName);
 
-                File imageFile = new File(servletRequest.getServletContext()
-                        .getRealPath("/image"), fileName);
+                File imageFile = new File(servletRequest.getServletContext() .getRealPath("/image"), fileName);
                 try {
                     multipartFile.transferTo(imageFile);
                 } catch (IOException e) {

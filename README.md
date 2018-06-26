@@ -231,9 +231,9 @@ Chapter 10: Internationalization
 
 Chapter 11: File Upload
 
-	10.1 - 11.2 introduce
+	11.1 - 11.2 introduce
 
-	10.3 - 10.8 commons fileupload demo
+	11.3 - 11.8 commons fileupload demo
 
 		url:http://localhost:8080/upload1/input-product
 
@@ -241,7 +241,10 @@ Chapter 11: File Upload
 		2.commons-fileupload-1.3.1
 		3.org.springframework.web.multipart.commons.CommonsMultipartResolver
 
-	10.9 - 11.10 servlet3 demo
+			Controller-ProductController 
+			Model(javabean)-Product
+
+	11.9 - 11.10 servlet3 demo
 
 		url:http://localhost:8080/upload2/input-product
 
@@ -250,6 +253,10 @@ Chapter 11: File Upload
 		3.@NotNull
 		4.Html5FileUploadController
 
+			Controller-ProductController 
+					-Html5FileUploadController
+			Model(javabean)-Product
+							-UploadedFile
 
 Chapter 12: File Download
 

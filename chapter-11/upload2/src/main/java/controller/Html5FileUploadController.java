@@ -23,20 +23,18 @@ public class Html5FileUploadController {
 	private static final Log logger = LogFactory.getLog(Html5FileUploadController.class);
 
     @RequestMapping(value = "/html5")
-    public String inputProduct() {
+    public String inputProduct() 
+    {
         return "Html5";
     }
 
     @RequestMapping(value = "/upload-file")
-    public void saveFile(HttpServletRequest servletRequest,
-            @ModelAttribute UploadedFile uploadedFile,
-            BindingResult bindingResult, Model model) {
-
+    public void saveFile(HttpServletRequest servletRequest,@ModelAttribute UploadedFile uploadedFile,BindingResult bindingResult, Model model) 
+    {
         MultipartFile multipartFile = uploadedFile.getMultipartFile();
         String fileName = multipartFile.getOriginalFilename();
         try {
-            File file = new File(servletRequest.getServletContext()
-                    .getRealPath("/file"), fileName);
+            File file = new File(servletRequest.getServletContext().getRealPath("/file"), fileName);
             multipartFile.transferTo(file);
         } catch (IOException e) {
             e.printStackTrace();
