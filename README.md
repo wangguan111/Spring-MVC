@@ -266,6 +266,10 @@ Chapter 12: File Download
 
 		1.@RequestHeader
 
+			Controller-ImageController 
+					-ResourceController
+			Model(javabean)-Login
+
 
 Chapter 13: Testing Your Application
 
