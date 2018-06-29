@@ -26,13 +26,15 @@ public class ControllerServlet extends HttpServlet
     @Override
     public void doGet(HttpServletRequest request,HttpServletResponse response)throws IOException, ServletException
     {
-        process(request, response);
+        System.out.println("git test");
+	process(request, response);
     }
 
     @Override
     public void doPost(HttpServletRequest request,HttpServletResponse response)throws IOException, ServletException 
     {
         process(request, response);
+	System.out.println("git test");
     }
 
     private void process(HttpServletRequest request,HttpServletResponse response)throws IOException, ServletException
