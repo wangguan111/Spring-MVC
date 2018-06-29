@@ -28,6 +28,7 @@ public class ControllerServlet extends HttpServlet
     {
         System.out.println("git test");
     	testGit();
+    	System.out.println("git add, commit, pull, push test");
     	process(request, response);
 
     }
@@ -38,6 +39,7 @@ public class ControllerServlet extends HttpServlet
         process(request, response);      
         System.out.println("git test");
     	testGit();
+    	System.out.println("git add, commit, pull, push test");
     }
 
     private void process(HttpServletRequest request,HttpServletResponse response)throws IOException, ServletException
