@@ -28,6 +28,7 @@ public class ControllerServlet extends HttpServlet
     {
         System.out.println("git test");
     	testGit();
+	testGit2();
     	process(request, response);
 
     }
@@ -38,6 +39,7 @@ public class ControllerServlet extends HttpServlet
         process(request, response);      
         System.out.println("git test");
     	testGit();
+	testGit2();
     }
 
     private void process(HttpServletRequest request,HttpServletResponse response)throws IOException, ServletException
@@ -76,9 +78,10 @@ public class ControllerServlet extends HttpServlet
             try 
             {
             	product.setPrice(new BigDecimal(productForm.getPrice()));
-            } catch (NumberFormatException e) 
+            } 
+	    catch (NumberFormatException e) 
             {
-            	
+            	throw Exception("error");
             }
             // execute action method
             SaveProductAction saveProductAction = new SaveProductAction();
@@ -98,6 +101,11 @@ public class ControllerServlet extends HttpServlet
     
     private void testGit()
     {
-    	System.out.println("git test");
+    	System.out.println("git stash, pull, stash pop, add, commit, push test");
+    }
+    
+     private void testGit2()
+    {
+    	System.out.println("git add, commit, pull, push test");
     }
 }
