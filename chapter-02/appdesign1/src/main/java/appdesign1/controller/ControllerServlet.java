@@ -27,14 +27,17 @@ public class ControllerServlet extends HttpServlet
     public void doGet(HttpServletRequest request,HttpServletResponse response)throws IOException, ServletException
     {
         System.out.println("git test");
-	process(request, response);
+    	testGit();
+    	process(request, response);
+
     }
 
     @Override
     public void doPost(HttpServletRequest request,HttpServletResponse response)throws IOException, ServletException 
     {
-        process(request, response);
-	System.out.println("git test");
+        process(request, response);      
+        System.out.println("git test");
+    	testGit();
     }
 
     private void process(HttpServletRequest request,HttpServletResponse response)throws IOException, ServletException
@@ -91,5 +94,10 @@ public class ControllerServlet extends HttpServlet
             RequestDispatcher rd = request.getRequestDispatcher(dispatchUrl);
             rd.forward(request, response);
         }
+    }
+    
+    private void testGit()
+    {
+    	System.out.println("git test");
     }
 }
